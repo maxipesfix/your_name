@@ -1,69 +1,21 @@
 {
-  "name": "motokano",
+  "name": "your_name",
   "version": "1.0.0",
-  "description": "motokano",
+  "description": "Demo skill",
   "main": "index.js",
   "scripts": {
     "lint": "jshint *.js",
-    "coverage": "cross-env NODE_ENV=test nyc mocha --compilers js:babel-core/register tests",
-    "mocha-test": "mocha --compilers js:babel-core/register tests",
-    "test": "run-local-lambda --file index.js --event tests/event.json",
-    "deploy": "aws lambda update-function-code --function-name arn:aws:lambda:us-west-2:688488685140:function:motokano-uswest2-lambda --zip-file fileb://Lambda-Deployment.zip --profile sm",
-    "deploy:dev": "aws lambda update-function-code --function-name arn:aws:lambda:ap-northeast-1:688488685140:function:kyabakura-apne1 --zip-file fileb://Lambda-Deployment.zip --region ap-northeast-1 --profile sm",
-    "predeploy": "zip -r Lambda-Deployment.zip * -x *.zip *.log",
-    "predeploy:dev": "zip -r Lambda-Deployment.zip * -x *.zip *.log"
+    "deploy": "aws lambda update-function-code --function-name arn:aws:lambda:ap-northeast-1:754031745817:function:your_name --zip-file fileb://Lambda-Deployment.zip",
+    "predeploy": "zip -r Lambda-Deployment.zip * -x *.zip *.log"
   },
   "repository": {
     "type": "git",
-    "url": "git@github-maxipesfix:maxipesfix/motokano"
+    "url": "git@github-maxipesfix:maxipesfix/your_name"
   },
   "dependencies": {
-    "aws-sdk": "latest",
-    "babel-polyfill": "^6.26.0",
-    "babel-preset-latest": "^6.24.1",
-    "babel-preset-stage-3": "^6.24.1",
-    "dashbot": "^9.8.0",
-    "run-local-lambda": "^1.1.1",
-    "save-dev": "^2.0.0"
+    "aws-sdk": "latest"
   },
-  "author": "SaltedMango",
+  "author": "maxim",
   "license": "ISC",
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-plugin-istanbul": "^4.1.5",
-    "babel-plugin-syntax-flow": "^6.18.0",
-    "babel-plugin-transform-flow-strip-types": "^6.22.0",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-es2017": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1",
-    "babel-register": "^6.26.0",
-    "chai": "^4.1.2",
-    "cross-env": "^5.1.3",
-    "jshint": "^2.9.5",
-    "json-loader": "^0.5.7",
-    "mocha": "^5.0.0",
-    "nyc": "^11.4.1",
-    "run-local-lambda": "^1.1.1",
-    "webpack": "^3.10.0"
-  },
-  "babel": {
-    "presets": [
-      "stage-3",
-      "latest"
-    ]
-  },
-  "nyc": {
-    "require": [
-      "babel-register"
-    ],
-    "reporter": [
-      "lcov",
-      "text"
-    ],
-    "sourceMap": false,
-    "instrument": false
-  }
+  "devDependencies": {}
 }
