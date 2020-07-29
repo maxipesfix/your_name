@@ -1,0 +1,8 @@
+dist/
+node_modules/
+Lambda-Deployment.zip
+coverage/
+coverage.html
+.nyc_output/
+.npm-debug.log
+.DS_Store 
