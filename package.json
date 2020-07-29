@@ -15,7 +15,13 @@
   "dependencies": {
     "aws-sdk": "latest"
   },
+  "eslintConfig": {
+    "parser": "babel-eslint"
+  },
   "author": "maxim",
   "license": "ISC",
-  "devDependencies": {}
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.5.0"
+  }
 }
