@@ -9,17 +9,13 @@ exports.handler = async (event) => {
 
     console.log("Input event: " + JSON.stringify(event));
     
-    const response = {
-        statusCode: 200,
-        body: JSON.stringify('Hello from Lambda!'),
-    };
     let output =  {
         "version": "1.0",
             "sessionAttributes": {},
             "response": {
                 "outputSpeech": {
                     "type": "SSML",
-                    "ssml": "Hi there!",
+                    "ssml": "<speak>Hi there!</speak>",
                 },
                 "card": {
                     "type": "Simple",
@@ -29,11 +25,14 @@ exports.handler = async (event) => {
                 "reprompt": {
                     "outputSpeech": {
                       "type": "SSML",
-                      "ssml": "Won't need a reprompt for now."
+                      "ssml": "<speak>We won't need a reprompt for now.</speak>"
                     }
                 },
                 "shouldEndSession": true
             }
         };
+
+    console.log("Final response: " + JSON.stringify(output));
+
     return output;
 };
